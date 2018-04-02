@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>filter by array</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.4/mapbox.css' rel='stylesheet' />
+
+<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.css' rel='stylesheet' />
+<link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css' rel='stylesheet' />
+<link rel="stylesheet" href="http://use.typekit.net/c/401507/1w;soleil,2,b7L:P:n3,b7Q:P:n5,b7S:P:n6/d?3bb2a6e53c9684ffdc9a9bf4195b2a62ac2abccc2253da0ff4783ec543b9156ede3d71f15e14e2be89c68dfcc0c582a3e203258f4f5ef06799ec3e4669e1beae2e5aef12998b2c5d3cadfec9e9bc51319e95598d6ff8997e3bd53da3db14bbfc78a443844ba9f6aed62a49b87b45af63d796f1dcd72f3ab7a908a2">
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+<link href='mapStyles.css' rel='stylesheet' />
+</head>
+<body>
+<nav id='filters' class='filter-ui desktop'>
+<a href='#' class='active' id='filter-all'><div class="ro-all"></div><div class="textWrap">All</div></a>
+<a href='#' id='filter-transformations'><div class="ro-transformations"></div><div class="textWrap">Transformations</div></a>
+<a href='#' id='filter-sustainability'><div class="ro-sustainability"></div><div class="textWrap">Sustainability</div></a>
+<a href='#' id='filter-landRestoration'><div class="ro-land-restoration"></div><div class="textWrap">Land Restoration</div></a>
+<a href='#' id='filter-communityBuilder'><div class="ro-community-builder"></div><div class="textWrap">Community Builder</div></a>
+</nav>
+
+<nav id='filters' class='filter-ui mobile'>
+
+<div id="grid-filter-mobile-drop">Filter: All</div>
+<ul id="grid-filter-menu" style="display: block;">
+
+	<li class="current-filter"><a href="#" class="grid-filter-button" id="filter-all">
+	All
+	</a></li>
+	<li><a href="#" class="grid-filter-button" id="filter-transformations">
+	Transformations
+	</a></li>
+	<li><a href="#" class="grid-filter-button" id="filter-sustainability">
+	Sustainability
+	</a></li>
+	<li><a href="#" class="grid-filter-button" id="filter-landRestoration">
+	Land Restoration
+	</a></li>
+	<li><a href="#" class="grid-filter-button" id="filter-communityBuilder">
+	Community Builder
+	</a></li>
+</ul>
+
+</nav>
+
+<div id="filter-box">
+	<div id="filter-box-close">+</div>
+	<div id="filter-box-content">
+		<div id="filter-box-icon" class=""></div>
+		<div id="filter-box-title" ></div>
+		<div id="filter-box-summary"></div>
+		<div id="filter-box-link" class="">
+		<a href="#"></a>
+		</div>
+	</div>	
+</div>
+
+<div id='map'></div>
+
+<script src='mapScript.js'></script>
+</body>
+</html>

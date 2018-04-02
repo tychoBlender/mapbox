@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Leaflet Label from JSON</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.css' rel='stylesheet' />
+<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-label/v0.2.1/leaflet.label.js'></script>
+
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
+
+</head>
+<body>
+<link href='leaflet.label.css' rel='stylesheet' />
+<div id='map'></div>
+
+<script>
+L.mapbox.accessToken = 'pk.eyJ1IjoiYWxsaXNpbmMtZGV2IiwiYSI6Ik83aDVmRjAifQ.OwuiFwlJneE5opLhw2mWPg';
+    var map = L.mapbox.map('map', 'examples.map-i875kd35', {
+        center: [37.78, -122.405],
+        zoom: 16
+    });
+	//L.marker([LAT, LNG]).bindLabel('marker-symbol, title, ').addTo(map);
+	
+    L.marker([38.9206, -77.0357]).bindLabel('Meridian Hill Park Danny').addTo(map);
+    L.marker([38.909776, -77.034097]).bindLabel('Sweetgreen').addTo(map);
+    L.marker([38.917139, -77.031745]).bindLabel('Subway').addTo(map);
+    L.marker([38.915300, -77.031724]).bindLabel('Manny & Olga\'s Pizza').addTo(map);
+    L.marker([38.913388, -77.032351]).bindLabel('Crossfit DC').addTo(map);
+    L.marker([38.91371, -77.03590]).bindLabel('House of the Temple').addTo(map);
+    L.marker([38.914722, -77.034414]).bindLabel('St James Church').addTo(map);
+    L.marker([38.91680, -77.02889]).bindLabel('U Street Metro').addTo(map);
+    L.marker([38.914271, -77.028293]).bindLabel('The Coffee Bar').addTo(map);
+    L.marker([37.781379, -122.406156,  ]).bindLabel('Tempest').addTo(map);
+    
+var latLngArray = [];
+
+
+var data = "http://dev.allisinc.com/mapbox/Map.json";
+// Assign handlers immediately after making the request,
+// and remember the jqXHR object for this request
+var jqxhr = $.ajax( data )
+  .done(function(jqxhr) {
+    console.log( "success" );
+	console.log(data);    
+	/*
+	$.each( data.features, function( i, item ) {
+		//coordinates			
+		//var lat = data.features[i].geometry.coordinates;
+		//var lng = data.features[i].geometry.coordinates[1];
+		//latLngArray.push(lat);
+		//title			
+		//console.log(data.features[i].properties.title);
+	});		
+	*/
+	//console.log(latLngArray[0][1],latLngArray[0][0]);
+	//L.marker(latLngArray[0]).bindLabel('Tempest').addTo(map);
+  })
+  .fail(function(data) {
+    console.log( "error", data );
+  })
+  .always(function(data) {
+    console.log( "complete" );
+  });
+ 
+// Perform other work here ...
+ 
+// Set another completion function for the request above
+jqxhr.always(function() {
+  console.log( "second complete" );
+});
+
+
+</script>
+</body>
+</html>

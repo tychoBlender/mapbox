@@ -1,0 +1,624 @@
+body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:100%; }
+
+.filter-ui.desktop{
+	display:block;
+}
+.filter-ui.mobile{
+	display:none;
+}
+
+.leaflet-control-attribution{
+display:none !important;
+}
+
+.leaflet-right{
+top:40% !important;
+}
+.leaflet-right .leaflet-control {
+margin-right:0px
+}
+.leaflet-right{
+top:40% !important;
+}
+.leaflet-right .leaflet-control {
+	margin-right:0px
+}
+.leaflet-bar{
+	background-color:transparent;
+}
+.leaflet-bar, .leaflet-control-layers,.leaflet-bar a:hover:first-child, .leaflet-bar a:link:first-child{
+	border: none !important;
+	border-radius: 0px !important;
+	box-shadow: none;
+	border-radius:none;
+	margin-bottom:1px !important;
+}
+.leaflet-bar a{
+	overflow:hidden;
+	height:68px;
+	width:68px;
+	background: url(img/icons_v2.png) no-repeat;
+	background-position: 0 -749px !important;
+	background-color: #00aef0;
+	-webkit-transition: background-color .5s ease-out; 
+  	-moz-transition: background-color .5s ease-out; 
+  	-ms-transition: background-color .5s ease-out; 
+  	-o-transition: background-color .5s ease-out; 
+  	transition: background-color .5s ease-out;
+}
+.leaflet-bar a:nth-child(2){
+	background-position: 0 -817px !important;
+	background-size: 68px 884px;
+    background-repeat: no-repeat;
+}
+
+.leaflet-bar a:link{
+	background-color: #00aef0;
+}
+
+.leaflet-bar a:active, .leaflet-bar a:hover{
+	background-color: #323232;
+}
+
+.leaflet-container.dark .map-tooltip .close, .leaflet-control-layers-toggle, .leaflet-control-zoom-in, .leaflet-control-zoom-out, .leaflet-popup-close-button, .map-tooltip .close, .mapbox-icon{
+	opacity: 1;
+	background-image: url('');
+	background-size:68px 650px;
+}
+
+.leaflet-bar .leaflet-control-zoom-out{
+	background-size:68px 650px;
+	background-position: 0 -64px;
+}
+.leaflet-control-attribution{
+display:none !important;
+}
+  
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+  .leaflet-popup{
+	bottom:-32px !important;
+	left:25px !important;
+  }
+  .leaflet-popup-tip-container,.leaflet-popup-close-button{
+	display:none;
+  }
+  .leaflet-popup-content-wrapper{
+  	padding: 0 !important;
+	border-radius:0;
+	/* width:353px; */
+	height:68px;
+	overflow:hidden;
+  }
+  .leaflet-popup-content{
+	  padding:0 !important;
+	  width:100% !important;
+	  height:100%;
+	  display:block;
+  }
+  .leaflet-popup-content > a{
+	  display:block;
+  }
+  .marker-cluster div{
+	color:#fff;
+	font: normal 600 22px "soleil",sans-serif;
+  }
+  .marker-cluster span {
+	line-height: 50px;
+	font-size:22px;
+  }
+  .marker-icon, .count-icon{
+	width:23px;
+	height:23px;
+	border-radius:50%;
+	background-color:#fff;
+	border:3px solid #00bcff;
+	color:#fff;
+  }
+  .marker-cluster div{
+	height:100%;
+	width:100%;
+	border-radius:50%;
+	margin:0;
+  }
+  .marker-cluster-small, .marker-cluster-medium{
+	max-width:50px;
+  	max-height:50px;
+  }
+  .marker-cluster-small{
+	/* background-color: rgba(18,115,225,0.5) !important; */
+	background-color:transparent;
+  }
+  .marker-cluster-small div{
+	background-color:#00bcff;
+  }
+  .marker-cluster .marker-cluster-medium div{
+	color:#fff;
+	text-align:center;
+	line-height:1em;
+	border-radius:50%;
+	background-color:transparent !important;
+  	background-color:#00bcff;
+  }
+  .marker-cluster .marker-cluster-medium div{
+	height:50px;
+	width:50px;
+	border-radius:50%;
+  }
+  
+  .marker-cluster-medium,.marker-cluster-medium div{
+	background-color:transparent;  
+	color:#fff;
+	border-radius:50%;
+  }
+  .marker-cluster-medium div{
+	background-color:#00bcff;
+	font-size:2.5em;
+  }
+  .marker-cluster-large,.marker-cluster-large div{
+	background-color:transparent;    
+	border-radius:50%;
+  }
+  
+  .marker-cluster-large,.marker-cluster .marker-cluster-large div{
+	background-color:#00bcff;
+  }  
+  .marker-cluster-large div span{
+	  line-height: 2.2em;
+	  font-size: 2.5em;
+  }
+  .inner{
+	  /* width:100%; */
+	  width:353px;
+  }
+  .inner,.inner .imgWrap, .inner .text{
+	  display:inline-block;
+	  position:relative;
+  }
+  .inner .imgWrap{
+	  height:68px;
+	  width:68px;
+	  background-position: center center !important;
+	  background-size: 112px 68px !important;
+  }
+  .inner .text{
+	  vertical-align: top;
+	  margin-top:13px;/*veritcally centers text in label*/
+	  margin-left:22px;
+	  margin-right:22px;
+  }
+  .inner .text p{
+	  margin:0;
+  }
+  .inner .text p.description{
+	font-size: 12px;
+	font-family: "soleil", Helvetica, Arial, sans-serif;
+	font-weight: 600;
+	-webkit-font-smoothing: antialiased;
+	color: #c4c4c4;
+	text-transform: uppercase;
+	letter-spacing: .08em;
+	line-height: 1.8;
+  }
+  .inner .text p.title{
+	font-size: 17px;
+	font-family: "soleil", Helvetica, Arial, sans-serif;
+	font-weight: 600;
+	-webkit-font-smoothing: antialiased;
+	color: #000000;
+	text-transform: capitalize !important;
+	letter-spacing: 0;
+  }
+  .inner #navnext{
+  	  position:absolute;
+	  /* float:right; */
+	  display:inline-block;
+	  right:0;
+	  height:68px;
+	  width:68px;
+	  background: url(img/icons_v2.png) no-repeat;
+	  background-position:0 0;
+	  background-color:#00aef0;
+	  -webkit-transition: background-color .5s ease-out; 
+	  -moz-transition: background-color .5s ease-out; 
+	  -ms-transition: background-color .5s ease-out; 
+	  -o-transition: background-color .5s ease-out; 
+	  transition: background-color .5s ease-out;
+  }
+  .inner:hover #navnext {
+	background-color: #323232;
+  }
+  .filter-ui {
+  background:#fff;
+  position:absolute;
+  top:35%;
+  z-index:100;
+  width:260px;
+  height:251px;
+  text-align:left;
+  overflow:hidden;
+  }
+  .filter-ui a,.filter-ui a:hover, .filter-ui a:visited, .filter-ui a:disabled{
+	  text-decoration:none;
+  } 
+  .filter-ui a{
+	position:relative;
+	height:35px;  
+	padding-top:14px;	 
+	padding-left:28px;
+	text-transform:uppercase;
+	display:block;
+	font-family: "soleil", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	font-size:13px;
+	vertical-align: middle;
+	color:#cecdcd;
+	border-bottom:solid 1px #eeeeee;
+  }
+
+  .filter-ui a:hover .textWrap,
+  .filter-ui a.active{
+	  color:#00aef0;
+  }
+  .filter-ui a:last-child{
+	  border:none;
+  }
+  .filter-ui a .textWrap{
+  	display:inline-block;
+  	vertical-align:middle;
+  	letter-spacing:0.08em;
+  }
+  
+  .ro-all,
+  .ro-transformations,
+  .ro-sustainability,
+  .ro-land-restoration,
+  .ro-community-builder{
+  	vertical-align: middle;
+  	display:inline-block;
+	background: url(http://redone.org/_sites/sdg/wp-content/themes/signature-r1/img/icon-expertise-areas.png) no-repeat;
+	width: 20px;
+	height: 25px;
+	margin: 0 15px 0 0;
+	-webkit-transition: .4s all ease-out;
+	-moz-transition: .4s all ease-out;
+	-ms-transition: .4s all ease-out;
+	-o-transition: .4s all ease-out;
+	transition: .4s all ease-out;
+  }
+  .ro-all{
+	  background-position: center -22px !important;	  
+  }
+  .filter-ui a:hover .ro-all,
+  a.active .ro-all{
+	  background-position: center -90px !important;	  
+  }
+  .ro-transformations{
+	  background-position: center -157px !important;	  
+  }
+  .filter-ui a:hover .ro-transformations,
+  a.active .ro-transformations{
+	  background-position: center -225px !important;	  
+  }
+  .ro-sustainability {
+	  background-position: center -294px !important;
+  }
+  .filter-ui a:hover .ro-sustainability,
+  a.active .ro-sustainability{
+	  background-position: center -362px !important;	  
+  }
+  .ro-land-restoration{
+	  background-position: 0 -431px !important;
+  }
+  .filter-ui a:hover .ro-land-restoration,
+  a.active .ro-land-restoration{
+	  background-position: 0 -499px !important;
+  }
+  .ro-community-builder{
+	  background-position: 0 -568px !important;
+  }
+  .filter-ui a:hover .ro-community-builder,
+  a.active .ro-community-builder{
+	  background-position: 0 -635px !important;
+  }
+  .leaflet-marker-icon > .marker-animate-hide{
+	  -webkit-transform:scale(0,0);
+	  opacity:0;
+	  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	  filter:alpha(opacity=0)
+  }
+  .leaflet-marker-icon > .marker-animate-show{
+	  -webkit-transform:scale(1,1);
+	  opacity:1;
+	  -ms-filter:none;
+	  filter:none
+  }	
+  #filter-box{
+	  display:none;
+	  position:absolute;
+	  z-index:999;
+	  top:31%;
+	  height:360px;
+	  width:467px;
+	  left:50%;
+	  margin-left:-233px;
+	  background-color:#323232;
+	  text-align:center;	  
+	  font-family: "soleil", Helvetica, Arial, sans-serif;
+  }
+  #filter-box-close{
+	  position:absolute;
+	  top:4px;
+	  right:4px;  	
+	  width:20px;
+	  height:20px;
+	  font-size:34px;
+	  font-weight:300;
+	  color:#fff;
+	  -ms-transform: rotate(45deg); /* IE 9 */
+	  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+	  transform: rotate(45deg);
+  }
+  #filter-box-close:hover{
+	  cursor: pointer;
+  }
+  
+  #filter-box-icon,
+  #filter-box-title,
+  #filter-box-summary,
+  #filter-box-link{
+	  display:block;
+	  width:100%;
+  }
+  #filter-box-content{
+	position: relative;
+	top: 50%;
+	-ms-transform: translateY(-50%); /* IE 9 */
+    -webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
+	transform: translateY(-50%);
+  }
+  #filter-box-icon{
+	width: 20px;
+	height: 25px;
+	margin:auto;
+	padding-top:3px;
+	padding-left:3px;
+	background: url(http://redone.org/_sites/sdg/wp-content/themes/signature-r1/img/icon-expertise-areas.png) 0 0 no-repeat;
+	overflow:hidden;	  
+  }
+  #filter-box-icon.sustainability{
+	  background-position: 50% -294px;
+  }
+  #filter-box-icon.transformations{
+	  background-position: 50% -154px;
+  }
+  #filter-box-icon.landRestoration{
+	  background-position: 50% -432px;
+  }
+  #filter-box-icon.comBuilder{
+	  background-position: 50% -567px;
+  }
+  #filter-box-title{
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 50px;
+	color: #FFF;
+	letter-spacing: .02em;
+	margin-top:7px;
+  }
+  #filter-box-summary{
+	color:#fff;
+	font-weight: 300;
+	font-size: 17px;
+	-webkit-font-smoothing: antialiased;
+	line-height: 28px;
+	letter-spacing: .01em;
+	width:330px;
+	margin:auto;
+  }
+  #filter-box-link{
+  	/* padding-left:50px; */
+  	height:15px;
+  	width:80%;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 1em;
+	letter-spacing: .08em;	
+	display: inline-block;
+	padding-top:15px;
+	background: url(img/icon-arrow_alpha.png) no-repeat;
+	-webkit-transition: background-position .3s ease-out;
+	-moz-transition: background-position .3s ease-out;
+	-ms-transition: background-position .3s ease-out;
+	-o-transition: background-position .3s ease-out;
+	transition: background-position .3s ease-out;
+  }
+  #filter-box-link.sustainability,
+  #filter-box-link.transformations,
+  #filter-box-link.landRestoration,
+  #filter-box-link.comBuilder
+  {
+	background-position:103px 15px;  
+  }
+ 
+  
+  #filter-box-link a:link, 
+  #filter-box-link a:hover,
+  #filter-box-link a:visited{
+	vertical-align:top;  	
+	color: #00aef0 !important;
+	text-decoration:none !important;
+  }
+  #filter-box-link.sustainability:hover,
+  #filter-box-link.transformations:hover,
+  #filter-box-link.landRestoration:hover,
+  #filter-box-link.comBuilder:hover
+  {
+	background-position: 110px 15px !important;
+  }
+  
+@media screen and (max-width:768px){
+	.filter-ui.desktop{
+		display:none;
+	}
+	.filter-ui.mobile {
+	display:block;
+	background:#01aef0;
+	position:absolute;
+	top:0;
+	z-index:100;
+	width:100%;
+	height:auto;
+	text-align:left;
+	overflow: visible;
+	}
+	#grid-filter-mobile-drop{
+	height: 50px;
+	width: 90%;
+	color: #fff;
+	line-height: 50px;
+	padding: 0 5%;
+	display: block;
+	font-family: "soleil", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	font-weight: 600 !important;
+	font-size: 13px;
+	letter-spacing: .08em;
+	cursor: pointer;
+	background: url(http://redone.org/_sites/sdg/wp-content/themes/signature-r1/img/mobile-arrow-down.png) right center no-repeat;
+	background-color: #00aef0;
+	background-size: 15px 9px;
+	background-position: 95% center;
+	-webkit-font-smoothing: antialiased;
+	font-family: soleil, Helvetica, Arial, sans-serif;
+	font-kerning: auto;
+	font-size: 13px;
+	font-stretch: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-variant-ligatures: normal;
+	font-weight: 600;
+	}
+	ul#grid-filter-menu{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	}
+	ul#grid-filter-menu li{
+	display: block;
+	margin: 0;
+	border-top: 1px solid #4dc6f5;
+	padding-left: 5%;
+	background-color: #00aef0;
+	}
+	.filter-ui a{
+	padding:0;
+	height:68px;
+	}
+	ul#grid-filter-menu a:hover, ul#grid-filter-menu li.current-filter a{
+	outline: 0 !important;
+	color: #fff;
+	}
+	ul#grid-filter-menu a{
+	display: block;
+	font-family: "soleil", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	font-weight: 300 !important;
+	font-size: 13px;
+	line-height: 68px !important;
+	color: #93dffc;
+	padding-left: 30px;
+	-webkit-transition: .4s all ease-out;
+	-moz-transition: .4s all ease-out;
+	-ms-transition: .4s all ease-out;
+	-o-transition: .4s all ease-out;
+	transition: .4s all ease-out;
+	background: url(http://redone.org/_sites/sdg/wp-content/themes/signature-r1/img/icon-expertise-areas-mobile.png) no-repeat;
+	letter-spacing: .08em;
+	}
+	
+	a#all {
+	background-position: 0 0;
+	}
+	
+	a#filter-all:hover,
+	li.current-filter a#filter-all {
+	background-position: 0 -68px !important;
+	outline: 0 !important;
+	}
+	
+	a#filter-transformations {
+	background-position: 0 -136px !important;
+	}
+	
+	a#filter-transformations:hover,
+	li.current-filter a#filter-transformations {
+	background-position: 0 -204px !important;
+	outline: 0 !important;
+	}
+	
+	a#filter-sustainability {
+	background-position: 0 -272px !important;
+	}
+	
+	a#filter-sustainability:hover,
+	li.current-filter a#sustainability {
+	background-position: 0 -340px !important;
+	outline: 0 !important;
+	}
+	
+	a#filter-landRestoration {
+	background-position: 0 -408px !important;
+	}
+	
+	a#filter-landRestoration:hover,
+	li.current-filter a#filter-landRestoration {
+	background-position: 0 -476px !important;
+	outline: 0 !important;
+	}
+	
+	a#filter-communityBuilder {
+	background-position: 0 -544px !important;
+	}
+	
+	a#community-builder:hover,
+	li.current-filter a#filter-communityBuilder {
+	background-position: 0 -612px !important;
+	outline: 0 !important;
+	}
+	.leaflet-bar a{
+		display:none;
+	}
+	.leaflet-popup-content-wrapper{
+		width:313px;
+		height:259px;
+	}
+	.leaflet-popup{
+		bottom:-148px !important;
+		left:-158px !important;
+	}
+	.inner .imgWrap{
+		display:block;
+		width:100% !important;
+		height:191px;
+		overflow:hidden;
+		background-position: center center !important;
+		background-size: 100% 100% !important;
+	}
+	.inner .imgWrap img{
+		height:auto;
+	}
+	.inner .text{
+		margin-left:12px;
+		display:inline-block;
+	}
+	.inner .text p.title{
+		font-size:15px;
+		
+	}
+	.inner #navnext{
+		right:40px;
+	}
+}

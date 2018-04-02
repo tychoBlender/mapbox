@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>SDG | Mapbox</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.3/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.3/mapbox.css' rel='stylesheet' />
+<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.css' rel='stylesheet' />
+<link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css' rel='stylesheet' />
+<link rel="stylesheet" href="http://use.typekit.net/c/401507/1w;soleil,2,b7L:P:n3,b7Q:P:n5,b7S:P:n6/d?3bb2a6e53c9684ffdc9a9bf4195b2a62ac2abccc2253da0ff4783ec543b9156ede3d71f15e14e2be89c68dfcc0c582a3e203258f4f5ef06799ec3e4669e1beae2e5aef12998b2c5d3cadfec9e9bc51319e95598d6ff8997e3bd53da3db14bbfc78a443844ba9f6aed62a49b87b45af63d796f1dcd72f3ab7a908a2">
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+<style>
+.leaflet-right{
+	top:40% !important;
+}
+.leaflet-right .leaflet-control {
+	margin-right:0px
+}
+.leaflet-bar{
+	background-color:transparent;
+}
+.leaflet-bar, .leaflet-control-layers,.leaflet-bar a:hover:first-child, .leaflet-bar a:link:first-child{
+	border: none !important;
+	border-radius: 0px !important;
+	box-shadow: none;
+	border-radius:none;
+	margin-bottom:1px !important;
+}
+.leaflet-bar a{
+	overflow:hidden;
+	height:68px;
+	width:68px;
+	background: url(img/icons_v2.png) no-repeat;
+	background-position: 0 -749px !important;
+	background-color: #00aef0;
+	-webkit-transition: background-color .5s ease-out; 
+  	-moz-transition: background-color .5s ease-out; 
+  	-ms-transition: background-color .5s ease-out; 
+  	-o-transition: background-color .5s ease-out; 
+  	transition: background-color .5s ease-out;
+}
+.leaflet-bar a:nth-child(2){
+	background-position: 0 -817px !important;
+	background-size: 68px 884px;
+    background-repeat: no-repeat;
+}
+
+.leaflet-bar a:link{
+	background-color: #00aef0;
+}
+
+.leaflet-bar a:active, .leaflet-bar a:hover{
+	background-color: #323232;
+}
+
+.leaflet-container.dark .map-tooltip .close, .leaflet-control-layers-toggle, .leaflet-control-zoom-in, .leaflet-control-zoom-out, .leaflet-popup-close-button, .map-tooltip .close, .mapbox-icon{
+	opacity: 1;
+	background-image: url('');
+	background-size:68px 650px;
+}
+
+.leaflet-bar .leaflet-control-zoom-out{
+	background-size:68px 650px;
+	background-position: 0 -64px;
+}
+.leaflet-control-attribution{
+display:none !important;
+}
+  
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+  .leaflet-popup{
+	bottom:-35px !important;
+	left:25px !important;
+  }
+  .leaflet-popup-tip-container,.leaflet-popup-close-button{
+	display:none;
+  }
+  .leaflet-popup-content-wrapper{
+  	padding: 0 !important;
+	border-radius:0;
+	width:353px;
+	height:68px;
+	overflow:hidden;
+  }
+  .leaflet-popup-content{
+	  padding:0 !important;
+	  width:100% !important;
+	  height:100%;
+	  display:block;
+  }
+  .marker-cluster div{
+	color:#fff;
+	font: normal 600 22px "soleil",sans-serif;
+  }
+  .marker-cluster span {
+	line-height: 50px;
+	font-size:22px;
+  }
+  .marker-icon, .count-icon{
+	width:23px;
+	height:23px;
+	border-radius:50%;
+	background-color:#fff;
+	border:3px solid #00bcff;
+	color:#fff;
+  }
+  .marker-cluster div{
+	height:100%;
+	width:100%;
+	border-radius:50%;
+	margin:0;
+  }
+  .marker-cluster-small, .marker-cluster-medium{
+	max-width:50px;
+  	max-height:50px;
+  }
+  .marker-cluster-small{
+	/* background-color: rgba(18,115,225,0.5) !important; */
+	background-color:transparent;
+  }
+  .marker-cluster-small div{
+	background-color:#00bcff;
+  }
+  .marker-cluster .marker-cluster-medium div{
+	color:#fff;
+	text-align:center;
+	line-height:1em;
+	border-radius:50%;
+	background-color:transparent !important;
+  	background-color:#00bcff;
+  }
+  .marker-cluster .marker-cluster-medium div{
+	height:50px;
+	width:50px;
+	border-radius:50%;
+  }
+  
+  .marker-cluster-medium,.marker-cluster-medium div{
+	background-color:transparent;  
+	color:#fff;
+	border-radius:50%;
+  }
+  .marker-cluster-medium div{
+	background-color:#00bcff;
+	font-size:2.5em;
+  }
+  .marker-cluster-large,.marker-cluster-large div{
+	background-color:transparent;    
+	border-radius:50%;
+  }
+  
+  .marker-cluster-large,.marker-cluster .marker-cluster-large div{
+	background-color:#00bcff;
+  }  
+  .marker-cluster-large div span{
+	  line-height: 2.2em;
+	  font-size: 2.5em;
+  }
+  .inner{
+	  width:100%;
+  }
+  .inner,.inner .imgWrap, .inner .text{
+	  display:inline-block;
+	  position:relative;
+  }
+  .inner .text{
+	  vertical-align: top;
+	  margin-top:15px;
+	  margin-left:22px;
+  }
+  .inner .text p{
+	  margin:0;
+  }
+  .inner .text p.description{
+	font-size: 12px;
+	font-family: "soleil", Helvetica, Arial, sans-serif;
+	font-weight: 600;
+	-webkit-font-smoothing: antialiased;
+	color: #c4c4c4;
+	text-transform: uppercase;
+	letter-spacing: .08em;
+	line-height: 1.2;
+  }
+  .inner .text p.title{
+	font-size: 17px;
+	font-family: "soleil", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	-webkit-font-smoothing: antialiased;
+	color: #000000;
+	line-height: 1.2;
+	text-transform: capitalize !important;
+  }
+  .inner #navnext{
+  	  position:relative;
+	  float:right;
+	  right:0;
+	  height:68px;
+	  width:68px;
+	  background: url(img/icons_v2.png) no-repeat;
+	  background-position:0 0;
+	  background-color:#00aef0;
+	  -webkit-transition: background-color .5s ease-out; 
+	  -moz-transition: background-color .5s ease-out; 
+	  -ms-transition: background-color .5s ease-out; 
+	  -o-transition: background-color .5s ease-out; 
+	  transition: background-color .5s ease-out;
+  }
+  .inner:hover #navnext {
+	background-color: #323232;
+  }
+  .filter-ui {
+  background:#fff;
+  position:absolute;
+  top:10px;
+  right:10px;
+  z-index:100;
+  padding:10px;
+  border-radius:3px;
+  }
+</style>
+</head>
+<body>
+
+<!-- Example data. -->
+<script src="realworld.388.js"></script>
+
+<nav id='filters' class='filter-ui'>
+		<div>
+	<input type='checkbox' checked=checked class='filter' name='filter' id='fast-food' value='fast-food'/>
+	<label for='fast-food'>SAMPLE</label>
+    </div>
+
+</nav>
+
+<div id='map'></div>
+
+<script>
+
+L.mapbox.accessToken = 'pk.eyJ1IjoiYWxsaXNpbmMtZGV2IiwiYSI6Ik83aDVmRjAifQ.OwuiFwlJneE5opLhw2mWPg';
+    var map = L.mapbox.map('map', 'allisinc-dev.39427880', { zoomControl: false })
+        .setView([37.878, -122.277], 10);
+    new L.Control.Zoom({ position: 'topright' }).addTo(map);
+	map.scrollWheelZoom.disable();
+
+	var filters = document.getElementById('filters');
+
+
+	var markers = L.markerClusterGroup({ 
+	showCoverageOnHover : false,
+	maxClusterRadius:110,
+	iconCreateFunction: function (cluster) {
+        var childCount = cluster.getChildCount();
+        var c = ' marker-cluster-';
+        if (childCount < 3) {
+            c += 'small';
+        } else if (childCount < 6) {
+            c += 'medium';
+        } else {
+            c += 'large';
+        }
+        
+        return new L.DivIcon({ 
+        	html: '<div><span><b>' + childCount + '</b></span></div>', 
+        	className: 'marker-cluster' + c, 
+        	iconSize: new L.Point(134, 134) 
+        });
+    }
+	
+	});		
+
+	// Collect the types of symbols in this layer. 
+	var typesObj = {}, types = [];
+	typesObj['All'] = true;
+	
+
+	for (var i = 0; i < types.length; i++) {
+	    // Create an an input checkbox and label inside.
+	    var item = filters.appendChild(document.createElement('div'));
+	    var checkbox = item.appendChild(document.createElement('input'));
+	    var label = item.appendChild(document.createElement('label'));
+	    checkbox.type = 'checkbox';
+	    checkbox.id = types[i];
+	    checkbox.checked = true;
+	    // create a label to the right of the checkbox with explanatory text
+	    label.innerHTML = types[i];
+	    label.setAttribute('for', types[i]);
+	    // Whenever a person clicks on this checkbox, call the update().
+	    checkbox.addEventListener('change', update);
+	    checkboxes.push(checkbox);
+	}
+	
+    for (var i = 0; i < sdgJSON.features.length; i++) {
+        var a = sdgJSON.features[i];
+        var title = a.properties['title'];
+        var description = a.properties['description'];
+        var str = title;
+		var href = str.split(' ').join('-').toLowerCase();
+		var mapThumb = href+'_thumb.jpg';
+		
+		//console.log(mapThumb);
+        
+        var content = 
+        	'<a href="/development/'+ href +'">' + 
+        	'<div class="inner">'+
+        	'<div class="imgWrap">'+
+        	'<img src=\"http:\/\/dev.allisinc.com\/sdgMap\/img\/mapThumbs\/sdgHouse.jpg\" alt=\"popup label image\" height=\"68\" width=\"68\" \/>' +
+			'<\/div>'+
+			'<div class="text">' +
+			'<p class="description">' + description + '<\/p>' +
+			'<p class="title">'+ title + '<\/p>'+
+			'<\/div>'+
+			
+			'<div id="navnext">' +
+			'<\/div>'+
+			'<\/div>'+
+			'<\/a>';
+			
+           
+        var marker = L.marker(new L.LatLng(sdgJSON.features[i].geometry.coordinates[1], sdgJSON.features[i].geometry.coordinates[0]), {icon: L.divIcon({className: 'count-icon',iconSize: [23, 23]})
+        });
+        
+        marker.bindPopup(content);
+        markers.addLayer(marker);
+    }
+    
+    map.addLayer(markers);
+    
+    //hide all markers on load?	
+	map.featureLayer.setFilter(function(f) {
+		console.log('setFilter running!');
+		//return false;
+	});
+    
+</script>
+</body>
+</html>

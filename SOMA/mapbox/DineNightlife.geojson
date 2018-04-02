@@ -1,0 +1,186 @@
+{
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          -122.406156,
+          37.781379
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "Tempest is a long standing bar located in the Natoma Alley off of 5th street. It has a long history with a beautiful rustic brick interior. We'll be here for you after a long days work, ready with a shot and a beer.\n<img src=\"http:\/\/1.bp.blogspot.com\/-XIirb1lNC80\/Ueypu8-YnQI\/AAAAAAAALFc\/Q7yMRUMPk0M\/s1600\/tempest-sf-20130301-097.jpg\">",
+        "id": "marker-i0fimys30",
+        "marker-color": "#1087bf",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "title": "Tempest"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -122.410506,
+          37.777092
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "Cellarmaker Brewing Company has been in the works for quite some time. Look for our beers to start making their way around better known beer bars and beer focused restaurants in San Francisco.\n<img src=\"http:\/\/s3-media1.fl.yelpcdn.com\/bphoto\/UWKYWgPXae5OvEXBqrsZHw\/l.jpg\"\/>",
+        "id": "marker-i0fisu1v1",
+        "marker-color": "#1087bf",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "title": "Cellarmaker Brewing"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -122.408709,
+          37.780971
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "This thriving cultural capsule located on the edge of SOMA intertwines the shared visions of four deeply-rooted industry veterans. Monarch gracefully dominates the corner of 6th and Mission as a rare multifunctional venue that is equally suited to an evening of sophisticated lounging and craft cocktailing, as to a night of music, movement and debauchery.\n",
+        "id": "marker-i0fiw9n12",
+        "marker-color": "#1087bf",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "title": "Monarch"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -122.40883648396,
+          37.775938728916
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "Come try one of our specialty cocktails or one of 10 beers on tap. Bring your friends for a round of pool or try your hand at Big Buck Hunter! Happy hour is from 4-7pm daily for $1 off all drinks!\n<img src=\"\">",
+        "id": "marker-i0fj3jbu3",
+        "marker-color": "#1087bf",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "title": "Bloodhound"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -122.40270763636,
+          37.781009717175
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "Jamber is San Francisco's first wine pub! We serve wine on tap (no bottles), beer on draft and local comfort food. Relax on our heated patio, get to know your neighbors and enjoy wine in your flip-flops.\n",
+        "id": "marker-i0fj6fze4",
+        "marker-color": "#1087bf",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "title": "Jamber"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -122.40287661552,
+          37.77785099026
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "With over 20 years in operation, three stores in California and an online presence, The Wine Club is one of the largest wine and spirits merchants on the West Coast. Our stores are located in San Francisco, Santa Clara (bordering San Jose) and Orange County. Although our name might suggest otherwise, we are not actually a club. No membership is required to shop with us, just come on in!\n",
+        "id": "marker-i0fj8j4g5",
+        "marker-color": "#1087bf",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "title": "Wine Club"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -122.41435,
+          37.786578
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "At Redford, we relish the opportunity to serve you.  We are a no fuss, no frills drinking and eating establishment.   We embrace anyone and everyone.  We are whole-heartedly American. Welcome Home.",
+        "id": "marker-i0fjadwl6",
+        "marker-color": "#1087bf",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "title": "Redford"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -122.41240918636,
+          37.778542105805
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "Modern British fare, cask conditioned ale, Georgian through Victorian era mixed drinks.\n",
+        "id": "marker-i0fjfvqa7",
+        "marker-color": "#1087bf",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "title": "The Coachman"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -122.39547908306,
+          37.779339212643
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "Located in the SOMA district of the city near AT&T Park, Alexander's Steakhouse offers Chef Marc Zimmerman's creative, fine-dining interpretation of the classic American steakhouse with hints of Japanese influence throughout the menu.",
+        "id": "marker-i0fjigrr8",
+        "marker-color": "#1087bf",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "title": "Alexander's Steakhouse"
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -122.40197271109,
+          37.781582089486
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "Zero Zero is the newest restaurant from San Francisco Chef Bruce Hill - featuring calpolitan pizzas,two big time bars, artisan pastas, Italian small plates and soft serve desserts\n",
+        "id": "marker-i0fjkgg29",
+        "marker-color": "#1087bf",
+        "marker-size": "medium",
+        "marker-symbol": "",
+        "title": "Zero Zero"
+      },
+      "type": "Feature"
+    }
+  ],
+  "id": "allisinc-dev.jj4ji26p",
+  "type": "FeatureCollection"
+}

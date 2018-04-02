@@ -1,0 +1,449 @@
+{ "type": "FeatureCollection",
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          -122.27172195911406,
+          37.79527954428784
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "Oakland, CA",
+        "id": "marker-i0euy2dq1",
+        "marker-color": "#1087bf",
+        "marker-size": "small",
+        "marker-symbol": "",
+        "title": "288 Third",
+        "type":"1",
+        "Transformations":true,
+		"link":true
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -122.267641,
+          37.811703
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "Oakland, Ca",
+        "id": "marker-i0ygayud0",
+        "marker-color": "#1087bf",
+        "marker-size": "small",
+        "marker-symbol": "",
+        "title": "Broadway Grand",		
+        "Transformations":true,
+        "link":true
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -122.277516,
+          37.805078
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "Oakland, Ca",
+        "id": "marker-i0ev2si44",
+        "marker-color": "#1087bf",
+        "marker-size": "small",
+        "marker-symbol": "",
+        "title": "Landmark Place",        
+        "Transformations":true
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -122.034655,
+          37.975346
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "Concord, CA",
+        "id": "marker-i0ev444l5",
+        "marker-color": "#1087bf",
+        "marker-size": "small",
+        "marker-symbol": "",
+        "title": "Renaissance Square",  
+        "Transformations":true
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -122.394224,
+          37.7751
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "San Francisco, CA",
+        "id": "marker-i0ev56e06",
+        "marker-color": "#1087bf",
+        "marker-size": "small",
+        "marker-symbol": "",
+        "title": "235 Berry Street",
+        "Transformations":true
+       
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -122.395191,
+          37.774336
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "San Francisco, Ca",
+        "id": "marker-i0ygfv182",
+        "marker-color": "#1087bf",
+        "marker-size": "small",
+        "marker-symbol": "",
+        "title": "255 Berry Street",
+        "Transformations":true
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -122.439104,
+          37.772998
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "San Francisco, Ca",
+        "id": "marker-i0yggez23",
+        "marker-color": "#1087bf",
+        "marker-size": "small",
+        "marker-symbol": "",
+        "title": "Broderick Place",
+        "Urban Remediation": true,
+        "link":true
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -122.012751,
+          37.405805
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "Sunnyvale, CA",
+        "id": "marker-i0yggywa4",
+        "marker-color": "#1087bf",
+        "marker-size": "small",
+        "marker-symbol": "",
+        "title": "Fair Oaks Transit Village",
+        "Urban Remediation": true
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -122.33746826649,
+          37.962724463975
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "San Pablo, CA",
+        "id": "marker-i0yght1b5",
+        "marker-color": "#1087bf",
+        "marker-size": "small",
+        "marker-symbol": "",
+        "title": "Abella",
+        "Urban Remediation": true,
+        "Transformations": true
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -122.25861668586731,
+          37.787386118323695
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "Oakland, Ca",
+        "id": "marker-i0ygj9jy6",
+        "marker-color": "#1087bf",
+        "marker-size": "small",
+        "marker-symbol": "",
+        "title": "Brooklyn Basin",
+        "Transformations":true,
+        "Sustainability":true,
+        "Urban Remediation":true,
+        "Community Builder":true,
+        "link":true
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -121.68381929398,
+          37.928678631721
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "Brentwood, Ca",
+        "id": "marker-i0ygl0mc7",
+        "marker-color": "#1087bf",
+        "marker-size": "small",
+        "marker-symbol": "",
+        "title": "Garin Ranch",
+        "Transformations":true,
+        "Urban Remediation":true,
+        "Community Builder":true
+        
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -121.35244041681,
+          38.802826087756
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "Roseville, Ca",
+        "id": "marker-i0ygp6xd8",
+        "marker-color": "#1087bf",
+        "marker-size": "small",
+        "marker-symbol": "",
+        "title": "Fiddyment Ranch",
+        "Transformations":true,
+        "Community Builder":true
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -121.72844588757,
+          37.675872549615
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "Livermore, Ca",
+        "id": "marker-i0ygrdkd9",
+        "marker-color": "#1087bf",
+        "marker-size": "small",
+        "marker-symbol": "",
+        "title": "Dunsmuir",       
+        "Transformations":true
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -122.18356579542,
+          37.869793084551
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "Orinda, Ca",
+        "id": "marker-i0ygtuw0a",
+        "marker-color": "#1087bf",
+        "marker-size": "small",
+        "marker-symbol": "",
+        "title": "Orinda Oaks",       
+        "Sustainability":true,
+        "link":true
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -122.53490030766,
+          37.993414792075
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "San Rafael, Ca",
+        "id": "marker-i0yhfm2a0",
+        "marker-color": "#1087bf",
+        "marker-size": "small",
+        "marker-symbol": "",
+        "title": "Redwood Village",
+        "Transformations":true,
+        "Sustainability":true,
+        "Urban Remediation":true,
+        "Community Builder":true
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -122.35251814127,
+          37.915700006692
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "Richmond, Ca",
+        "id": "marker-i0yhgium1",
+        "marker-color": "#1087bf",
+        "marker-size": "small",
+        "marker-symbol": "",
+        "title": "Anchor Cove",
+        "Urban Remediation":true
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -122.098652,
+          37.896905
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "Lafayette, Ca",
+        "id": "marker-i0yhh0ia2",
+        "marker-color": "#1087bf",
+        "marker-size": "small",
+        "marker-symbol": "",
+        "title": "Marquis Lafayette",        
+        "Transformations":true,
+        "link":true
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -122.39348083735,
+          37.711997927228
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "San Francisco, Ca",
+        "id": "marker-i0yhkjko3",
+        "marker-color": "#1087bf",
+        "marker-size": "small",
+        "marker-symbol": "",
+        "title": "Candlestick Cove",        
+        "Community Builder":true
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -122.16435581446,
+          37.736247084845
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "Oakland, Ca",
+        "id": "marker-i0yhmlve4",
+        "marker-color": "#1087bf",
+        "marker-size": "small",
+        "marker-symbol": "",
+        "title": "Durant Square",        
+        "Urban Remediation":true,
+        "Community Builder":true
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -122.266034,
+          37.812706
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "Oakland, Ca",
+        "id": "marker-i0yhn2yf5",
+        "marker-color": "#1087bf",
+        "marker-size": "small",
+        "marker-symbol": "",
+        "title": "The Hive",        
+        "Sustainability":true,
+        "Urban Remediation":true,
+        "Community Builder":true,
+        "link":true
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -121.91041231155,
+          37.704929596628
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "Dublin, Ca",
+        "id": "marker-i0yho8pl7",
+        "marker-color": "#1087bf",
+        "marker-size": "small",
+        "marker-symbol": "",
+        "title": "Tralee",        
+        "Community Builder":true,
+        "link":true
+      },
+      "type": "Feature"
+    },
+    {
+      "geometry": {
+        "coordinates": [
+          -122.56626874208,
+          38.105839673683
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "Novato, Ca",
+        "id": "marker-i0yhpvqn8",
+        "marker-color": "#1087bf",
+        "marker-size": "small",
+        "marker-symbol": "",
+        "title": "Millworks",      
+        "Urban Remediation":true,
+        "Community Builder":true,
+        "link":true
+      },
+      "type": "Feature"
+    }
+
+  ]
+}
