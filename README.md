@@ -1,5 +1,6 @@
-# mapbox
+# Mapbox / Google Maps / Custom Points of Interest
 Exploring custom map point of interest skin/labels
+
 
 ### View Work
 
@@ -10,5 +11,5 @@ Exploring custom map point of interest skin/labels
 
 [1]: http://www.signaturedevelopment.com/#map "Signature Development Group Home"
 [2]: http://thecoveca.com/neighborhood/#map "The Cove Neighborhood Map"
-[3]: http://thecoveca.com/neighborhood/#map "The Cove Neighborhood Map"
+[3]: https://tychoblender.github.io/mapbox/ "San Francisco South of Market Points of Interest"
 

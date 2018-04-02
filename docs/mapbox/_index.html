@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Filter by marker type</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.css' rel='stylesheet' />
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
+<script src="//use.typekit.net/wrh6vvz.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
+</head>
+<body>
+<style>
+body { margin:0; padding:0; }
+#map { position:absolute; top:0; bottom:0; width:100%; }
+
+	.filter-ui {
+	background:#fff;
+	position:absolute;
+	top:50px;
+	right:50px;
+	z-index:100;
+	padding:0;
+	border-radius:0px;
+	text-transform:uppercase;
+	}
+	
+	.filter-ui div{
+	padding: 0px 29px;
+	height:50px;
+	text-align:center;
+	line-height:50px;
+	}
+		
+	.filter-ui div:nth-child(even){
+	border-top:solid 1px #e5e5e5;	
+	border-bottom:solid 1px #e5e5e5;	
+	}
+	
+	.filter-ui div:last-child{
+	border-bottom:none;
+	}
+	
+	
+	.leaflet-popup-content-wrapper{
+	border-radius:0;
+	}
+	.leaflet-popup-content-wrapper,.leaflet-popup-close-button+.leaflet-popup-content-wrapper .leaflet-popup-content{
+	padding:0;
+	}
+	.leaflet-popup-close-button{
+	display:none;  
+	}
+	.leaflet-popup-content{
+	width:320px !important;
+	height:90px;
+	overflow: hidden;
+	}
+	.leaflet-popup-content .inner{
+	-moz-transform: rotate(18deg);
+	-webkit-transform: rotate(18deg);
+	-o-transform: rotate(18deg);
+	margin-top: -70px;
+	margin-left: -70px;
+	background: #fff;
+	overflow: hidden;
+	float: left;
+	width: 144px;
+	height: 230px;
+	}
+	.leaflet-popup-content .content{  
+	-moz-transform: rotate(-18deg);
+	-webkit-transform: rotate(-18deg);
+	-o-transform: rotate(-18deg);
+	overflow: hidden;
+	margin-left: 50px;
+	overflow: hidden;
+	width: 275px;
+	height: 230px;
+	}
+	.leaflet-popup-content .content img {
+	float:left;
+	width: 40%;
+	margin-left: 10px;
+	margin-top: 18px;
+	}
+	
+	.leaflet-popup-content .text{
+	font-family: "museo-sans",sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	letter-spacing:1px;
+	margin-top: 19px;  
+	margin-left: 109px;
+	}
+	.leaflet-popup-content .text p{
+	  font-size: 11px;
+	  line-height: 18px !important;
+	margin:0;
+	}
+	.leaflet-popup-content .text p.type{
+	  color:#939598;
+	  text-transform:uppercase;
+	}
+	.leaflet-popup-content .text p.boldIt{
+	font-size: 14px;
+	font-weight:900;
+	text-transform:uppercase;
+	color:#000;
+	}
+	.leaflet-popup-content .text p.address{
+	  position:relative;
+	font-size: 12px;
+	font-weight:300;
+	}
+	.leaflet-popup-content .text p.address a, .leaflet-popup-content .text p.address a:link{	
+	font-weight:900;
+	color:#000;
+	line-height: 1.025em;
+	display: inline-block;
+	text-decoration: none;
+	border-bottom: solid 1px #000;
+	padding: 0;
+	}
+	
+	.leaflet-popup-content .text p.address a:hover{
+	color:#555;
+	}
+	.leaflet-popup-tip-container{
+	display:none;
+	}
+	.leaflet-popup{
+	margin-bottom:-90px;
+	}
+	.count-icon {
+	background:#fff200;
+	/* border:5px solid rgba(255,255,255,0.5); */
+	color:#fff;
+	text-align:center;
+	border-radius:50%;
+	line-height:30px;
+	}
+	.count-icon.active {
+	background:red;  
+	}
+	#filters{
+	text-align:center;
+	}
+	#filters input[type=radio]{
+	display:none;
+	}
+	#filters label{
+	font-family: "museo-sans",sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size:13px;
+	color:#d4d4d4;
+	cursor: pointer;
+	}
+	#filters input[type=radio]:checked + label{
+    color:#000;
+    font-weight: 700;
+	} 
+	.navTitle{
+		display:none;
+		font-size: 0em;
+		-webkit-margin-before: 0em;
+		-webkit-margin-after: 0em;
+	}
+	.leaflet-bottom leaflet-right{
+		display:none !important;
+	}
+@media screen and (max-width: 650px) {
+	#map{
+		
+	}
+	#filters{
+		text-align:center;
+	}
+	.filter-ui div:nth-child(1),
+	.navTitle{
+		display:block;
+		font-family: "halogen",sans-serif;
+		font-style: normal;
+		font-weight: 100;
+		font-size: 1.8em;
+		letter-spacing:5px;
+		color:#FFF;
+		text-align:left;
+		padding:20px 0 0 20px;
+		margin:0;
+	}
+	.filter-ui{
+		position:relative;
+		top:0px;
+		right:0px;
+		z-index:100;
+		padding:0 25px;
+		border-radius:0px;
+		text-transform:uppercase;
+		display:block;
+		background-color:#000;
+		padding: 0px;
+		margin:0;
+		/* height:200px; */
+		width:100%;
+		text-align:center;
+	}
+	.filter-ui div{
+		display:inline-block;
+		padding:0 5px;
+		margin:0;
+		line-height:50px;
+	}
+		
+	.filter-ui div:nth-child(even){
+		border:none;
+	}
+	
+	#filters label {
+		font-size: 12px;
+		line-height:1.1em;
+	}
+	
+	#filters input[type=radio]{
+		display:none;
+	}
+	
+	#filters input[type=radio] + label {
+		display:inline-block;
+		font-size:12px;
+		vertical-align: middle;
+    }
+    
+	input[type=radio] + label:before{
+		display:inline-block;
+		content:"\20";
+		border-radius: 50px;
+		border: 3px solid #fff200;
+		margin-right:5px !important;
+		height:14px;
+		width:14px;
+		vertical-align:inherit;
+	}
+
+	#filters input[type=radio]:checked + label{
+	    color:#fff200;
+		font-weight: 700;
+	} 
+	input[type=radio]:checked + label:before {
+		display:inline-block;
+		font-family: "halogen",sans-serif;
+		font-style: normal;
+		font-weight: 100;
+		color:#fff200;
+		vertical-align: middle;
+	}
+	.contain #map{
+		
+	}
+}
+</style>
+
+<nav id='filters' class='filter-ui'></nav>
+<div id='map'></div>
+
+
+<script>
+L.mapbox.accessToken = 'pk.eyJ1IjoiYWxsaXNpbmMtZGV2IiwiYSI6Ik83aDVmRjAifQ.OwuiFwlJneE5opLhw2mWPg';
+var map = L.mapbox.map('map', 'allisinc-dev.5bc1003f')
+	.setView([37.781, -122.402], 16);
+
+//var viewAll = document.getElementById('all');
+
+//viewAll.checked = true;
+
+// Find and store a variable reference to the list of filters.
+var filters = document.getElementById('filters');
+
+// Wait until the marker layer is loaded in order to build a list of possible
+// types. If you are doing this with another featureLayer, you should change
+// map.featureLayer to the variable you have assigned to your featureLayer.
+var featureLayer = L.mapbox.featureLayer()
+    .loadURL('Map.geojson');
+
+var viewAll = document.getElementById('all');
+var typesObj = {}, types = [];
+
+featureLayer.on('ready', function() {
+var i = 0;
+  
+// Collect the types of symbols in this layer. 
+var typesObj = {}, types = [];  
+typesObj['View All'] = true;
+	
+featureLayer.eachLayer(function(layer) {	
+	//return Lat/Lng accurately
+	var filterFloat = function (value) {
+		if(/^(\-|\+)?([0-9]+(\.[0-9]+)?|Infinity)$/.test(value))
+		return Number(value);
+		return NaN;
+	}
+	
+	var geoLat = filterFloat(layer.feature.geometry.coordinates[1]);
+	var geoLng = filterFloat(layer.feature.geometry.coordinates[0]);
+	
+	//build popup label
+	var content = 
+	'<div class="inner">'+
+	'<div class="content">'+
+    '<img src="http:\/\/dev.allisinc.com\/mapbox\/img/'+ layer.feature.properties.image + '" alt=\"tempestTitle\" \/>' +
+    '<\/div>' +
+    '<\/div>' +
+    '<div class="text">' +
+    '<p class="type">'+ layer.feature.properties.type + '<\/p>' +
+    '<p class="boldIt">' + layer.feature.properties.title + '<\/p>' +
+    '<p class="address">'+layer.feature.properties.description + '<\/p>'+
+    '<\/div>';
+
+	L.marker([ geoLat, geoLng ],{icon: L.divIcon({ className:'count-icon', html:'', iconSize: [20, 20] }) })
+	.addTo(map)
+	.bindPopup(content);
+	
+	for (var i = 0; i < featureLayer._geojson.features.length; i++){
+		typesObj[featureLayer._geojson.features[i].properties['type']] = true;	
+	}	
+});
+	
+	  
+  
+	
+var checkboxes = [];
+
+for (var k in typesObj) {
+  	types.push(k);
+};
+
+
+// Create a filter interface.
+for (var i = 0; i < types.length; i++) {
+	//iterationCount
+	//console.log(i);
+	
+// Create an an input radio and label inside.
+var item = filters.appendChild(document.createElement('div'));
+var checkbox = item.appendChild(document.createElement('input'));
+var label = item.appendChild(document.createElement('label'));
+checkbox.type = 'radio';
+checkbox.id = types[i];
+    
+/* checkbox.checked = true; */
+checkbox.checked = false;
+checkbox.setAttribute('name', 'group');
+// create a label to the right of the checkbox with explanatory text
+label.innerHTML = types[i];
+label.setAttribute('for', types[i]);
+// Whenever a person clicks on this checkbox, call the update().
+checkbox.addEventListener('change', update);
+checkboxes.push(checkbox);	
+
+}
+
+  
+// This function is called whenever someone clicks on a checkbox and changes
+// the selection of markers to be displayed.
+function update(layer) { 
+//console.log('updateMarkers!');
+var enabled = {};
+//Clear the markers!
+var geoJSON = featureLayer._geojson.features;
+
+for (var i = 0; i < checkboxes.length; i++) {
+if(checkboxes[i].checked != false){	    
+enabled[checkboxes[i].id] = true;//returns selected type
+//display markers from SPECIFIC layer
+if(checkboxes[i].id in enabled){
+	for (var key in geoJSON) {
+	//console.log(key);//0,1,2,3,4
+	var activeType = [];					
+	console.log(activeType);				
+	if(geoJSON[key].properties.type == checkboxes[i].id ){
+		console.log(typesObj);//confirms what is ENABLED
+		
+		if(geoJSON[key].properties.type in enabled){			
+			console.log('Enabled');
+			console.log(geoJSON[key].properties.type);		
+		}
+		console.log('PROPERTIES');
+		console.log(geoJSON[key].properties);
+		
+		var description = geoJSON[key].properties.description;		
+		var title 		= geoJSON[key].properties.title;		
+		var type 		= geoJSON[key].properties.type;		
+		var image 		= geoJSON[key].properties.image;
+		var gLat 		= geoJSON[key].geometry.coordinates[1];
+		var gLng 		= geoJSON[key].geometry.coordinates[0];
+		
+		//build popup label
+		var content = 
+		'<div class="inner">'+
+		'<div class="content">'+
+		'<img src="http:\/\/dev.allisinc.com\/mapbox\/img/'+ image + '" alt=\"tempestTitle\" \/>' +
+		'<\/div>' +
+		'<\/div>' +
+		'<div class="text">' +
+		'<p class="type">'+ type + '<\/p>' +
+		'<p class="boldIt">' + title + '<\/p>' +
+		'<p class="address">'+ description + '<\/p>'+
+		'<\/div>';
+		
+		//ADD CUSTOM MARKER TO MAP		
+		//L.marker([ gLat, gLng ],{icon: L.divIcon({ className:'count-icon', html:'', iconSize: [20, 20] }) }).addTo(map).bindPopup(content);
+	}	    		
+}
+}
+}
+}
+	
+}//close update
+});
+
+</script>
+</body>
+</html>

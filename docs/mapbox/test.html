@@ -1,0 +1,82 @@
+
+<!DOCTYPE html >
+<html>
+<head>
+  
+  <meta charset='UTF-8'/>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+  <meta name='robots' content='index'/>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <meta name='description' content='Build anything with Mapbox.js, a library for fast & interactive maps.'/>
+  <title>Non iFrame Mapbox</title>
+
+  
+  <link href='base.css' rel='stylesheet' />
+  <link href='https://www.mapbox.com/css/site.css' rel='stylesheet' />
+  <!--[if IE 9]><link href='https://www.mapbox.com/css/site-ie9.css' rel='stylesheet' /><![endif]-->
+  <link rel='shortcut icon' href='https://www.mapbox.com/img/favicon.ico' type='image/x-icon' />
+  <link rel='alternate' type='application/rss+xml' title='RSS' href='https://www.mapbox.com/blog/blog.rss' />
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.css' rel='stylesheet' />
+
+  <!--[if lt IE 9 ]><script src='https://www.mapbox.com/js/redirect-ie.js'></script><![endif]-->
+  <script src='https://js.stripe.com/v2/'></script>
+  <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.2/mapbox.js'></script>
+
+  <script>
+  window.mapbox_api = 'https://www.mapbox.com';
+  window.mapbox_tileApi = 'https://api.tiles.mapbox.com';
+  window.mapbox_accessToken = '' || 'pk.eyJ1IjoibWFwYm94IiwiYSI6IlhHVkZmaW8ifQ.hAMX5hSW-QnTeRCMAy9A8Q'
+  if (L.mapbox.VERSION[0] === '2') {
+      L.mapbox.accessToken = window.mapbox_accessToken;
+      L.mapbox.config.FORCE_HTTPS = true;
+      L.mapbox.config.HTTPS_URL = window.mapbox_tileApi + '/v4';
+  }
+  </script>
+  <script src='https://www.mapbox.com/base.js/dist/base.js'></script>
+  
+  
+</head>
+<body class='fill-light full'>
+
+<!-- <link href='/mapbox.js/assets/css/site.css' rel='stylesheet' /> -->
+<!-- <link href='https://www.mapbox.com/css/docs.css' rel='stylesheet' /> -->
+<!-- <script src='/mapbox.js/assets/js/prettify.js'></script> -->
+<!-- <script src='/mapbox.js/assets/js/site.js'></script> -->
+
+
+<div class='limiter clearfix'>
+    <div class='contain col12'>
+		<div class='row16 z1 hide-mobile'>
+			<div id='example-map' class='pin-bottom pin-top'></div>
+		</div>
+    </div>
+</div>
+
+
+<script>
+$(function load() {
+    L.mapbox.map('example-map', 'examples.map-i86nkdio', {
+      attributionControl: false,
+      scrollWheelZoom: false,
+      center: [40.70, -73.98],
+      zoom: 14
+    });
+
+    var mapid = App.storage('map.id'),
+        exampleid = 'username.mapid';
+
+    if (mapid && (mapid || '').indexOf(App.user.id) === 0) {
+        exampleid = mapid;
+    }
+
+    // Replace username.mapid with the current one.
+    $('pre, code').each(function() {
+        $(this).html($(this).html().replace(/username.mapid/g, exampleid));
+    });
+});
+</script>
+
+
+
+</body>
+</html>

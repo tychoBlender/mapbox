@@ -1,0 +1,24 @@
+{
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          -122.406156,
+          37.781379
+        ],
+        "type": "Point"
+      },
+      "properties": {
+        "description": "Tempest is a long standing bar located in the Natoma Alley off of 5th street. It has a long history with a beautiful rustic brick interior. We'll be here for you after a long days work, ready with a shot and a beer.\n<img src=\"http:\/\/1.bp.blogspot.com\/-XIirb1lNC80\/Ueypu8-YnQI\/AAAAAAAALFc\/Q7yMRUMPk0M\/s1600\/tempest-sf-20130301-097.jpg\" width=\"100%\">",
+        "id": "marker-i0fimys30",
+        "marker-color": "#1087bf",
+        "marker-size": "medium",
+        "marker-symbol": "bus",
+        "title": "Tempest"
+      },
+      "type": "Feature"
+    }
+  ],
+  "id": "allisinc-dev.jj4ji26p",
+  "type": "FeatureCollection"
+}
