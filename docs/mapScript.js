@@ -1,5 +1,5 @@
 //Desktop Resize
-$(window).resize(function(){	
+//$(window).resize(function(){	
 /*
 if ($(".navTitle").css("display") != "none" ){
 	$('.contain > div').removeClass('row16');
@@ -10,7 +10,7 @@ if ($(".navTitle").css("display") == "none" ){
 	$('.contain > div').addClass('row16');
 }
 */
-});
+//});
 
 L.mapbox.accessToken = 'pk.eyJ1IjoiYWxsaXNpbmMtZGV2IiwiYSI6Ik83aDVmRjAifQ.OwuiFwlJneE5opLhw2mWPg';
 var map = L.mapbox.map('map', 'allisinc-dev.5bc1003f')
